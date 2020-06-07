@@ -13,4 +13,13 @@ services:
   db:
     build: ./db
     env_file: db/.env
-
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+      - "433:433"
+    volumes:
+      - /www/static
+      - './app/wishlist/static/:/app/static'
+    depends_on:
+      - app
