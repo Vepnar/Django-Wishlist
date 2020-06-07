@@ -1,3 +1,4 @@
+import psycopg2.extensions
 import os
 
 SECRET_KEY = os.environ['SECRET_KEY']
@@ -86,7 +87,7 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
 
 SITE_ID = 1
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-US'
 
 TIME_ZONE = 'UTC'
 
