@@ -1,0 +1,14 @@
+version: "3.6"
+services:
+  app:
+    build: ./app
+    env_file: app/.env
+    tty: true
+    volumes: 
+    - "./app:/app/"
+    ports:
+      - "8000:8000"
+  db:
+    build: ./db
+    env_file: db/.env
+
